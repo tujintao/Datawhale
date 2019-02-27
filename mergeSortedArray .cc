@@ -22,7 +22,7 @@ int main()
     vector<int> a = {1,2,3,4,5};
     vector<int> b = {6,7};
     vector<int> c;
-    int k = merge(c, a, b);
+    merge(c, a, b);
     // for (int i = 0; i < k; ++i) 
     //     cout << c[i];
     for (int e : c) cout << e;
