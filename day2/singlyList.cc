@@ -18,7 +18,12 @@ public:
         _size = 0;
     }
     ~singlyList(){
-        delete head;
+       ListNode* p = head->next;
+       while(p) {
+           delete p;
+           p = p->next;
+       }
+       delete  head;
     }
     ListNode* insert1(const int& e);
     ListNode* insert2(const int& e);
