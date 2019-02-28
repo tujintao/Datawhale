@@ -13,7 +13,7 @@ public:
     //为了方便访问重载[]运算符
     T& operator[](int pos)const {return _elem[pos];};
     //因为是有序数组 可以通过二分查找访问元素;
-    T upper_bound(int lo, int hi, T const& key);//[lo, hi)
+    T lower_bound(int lo, int hi, T const& key);//[lo, hi)
     void print() { for (int i = 0; i < _size; ++i) std::cout << _elem[i]; std::cout<<std::endl;};
 protected:
     void shrink();
@@ -42,7 +42,7 @@ template<typename T> bool Array<T>::erase(int pos) {
     _size--;
     //
 }
-template<typename T> T Array<T> :: upper_bound(int lo, int hi, T const& key) {
+template<typename T> T Array<T> :: lower_bound(int lo, int hi, T const& key) {
     if (lo < 0 || hi > _size) {
         std::cerr << "index boundary error" << std::endl;
     }
@@ -54,7 +54,7 @@ template<typename T> T Array<T> :: upper_bound(int lo, int hi, T const& key) {
         else 
             lo = mid + 1;
     }
-    return lo;//因为是upper_bound如果元素不存在会返回最接近的上
+    return lo;//>=key
 }
 int main()
 {
@@ -72,7 +72,7 @@ int main()
     a.modify(9, 666);
     a.print();
     // for (int = )
-    std::cout << a.upper_bound(0, a.size(), 5);
-    std::cout << a.upper_bound(0, a.size(), 9);
+    std::cout << a.lower_bound(0, a.size(), 5);
+    std::cout << a.lower_bound(0, a.size(), 9);
     return 0;
 }
