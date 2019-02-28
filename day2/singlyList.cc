@@ -24,6 +24,7 @@ public:
            p = p->next;
        }
        delete  head;
+       delete  tail;
     }
     ListNode* insert1(const int& e);
     ListNode* insert2(const int& e);
