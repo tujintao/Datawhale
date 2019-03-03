@@ -14,6 +14,8 @@ public:
         tail = new ListNode(0);
         head->next = tail;
         tail->pre = head;
+        tail->next = head;
+        head->pre = tail;
     }
     void print();
     bool empty() const {return head->next == tail;}
