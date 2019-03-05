@@ -87,32 +87,7 @@ int Kth_complPQ(vector<int>& a, int k) {
     return ch.top();
 }
 //在复习的堆的实现与性质后根据伪码实现的
-int Kth_comlheap(vector<int>& a, int k)
-{
-    const int N = a.size();
-    int h[N];//不是很大的话应该不会爆栈，这里描述算法为主
-    memset(h, 0, sizeof(h[0]));
-    int p, ch;
-    for (int x : a) {
-        if (x > h[0]) {
-            h[0] = x;
-            p = 0;
-            while (2*p + 1 < k){ //只建立容量为k的最小堆
-                ch = 2 * p + 1;
-                if (ch < k - 1 && h[ch] > h[ch+1])
-                    ch++;
-                if (h[p] > h[ch]) {
-                    swap(h[p], h[ch]);
-                    p = ch;
-                } else {
-                    break;
-                }
-            }
-        }
-    }
-    for (int i = 0; i < k; ++i) cout << h[i] << " ";
-    return h[0];
-}
+
 int main()
 {
     vector<int> a = {2, 6, 3, 99, 5};
@@ -121,6 +96,6 @@ int main()
     cout << BinarySearchKth(b, sizeof(b)/sizeof(float), 4) << endl;
     cout << findK(a, 0, a.size() - 1, 4) << endl;
     cout << Kth_complPQ(a, 4) << endl;
-    cout << Kth_comlheap(a, 4) << endl;
+    // cout << Kth_comlheap(a, 4) << endl;
     return 0;
 }
