@@ -77,7 +77,7 @@ int main()
     int j = 0;
     //堆排序
     //因为是实现的是小顶堆，堆顶的元素一旦删除顺序就定了
-    //每一次下滤的复杂度都是O(n)
+    //n个元素每次下滤的复杂度是O(log(n))
     while(q.size() && j < size) {
         b[j++] = q.delMax();
         // std::cout << q.delMax() << std::endl;
