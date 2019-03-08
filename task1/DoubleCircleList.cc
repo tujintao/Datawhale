@@ -20,11 +20,17 @@ public:
     void print();
     bool empty() const {return head->next == tail;}
     ~Dlist() {
+        // while (head != tail) {
+        //     delete head;
+        //     head = head->next;
+        // }
+        // delete tail;
         while (head != tail) {
-            delete head;
+            ListNode* p = head;
             head = head->next;
+            delete p;
+            p = nullptr;
         }
-        delete tail;
     }
     ListNode* insert(const int& e);
     void remove(const int& e);
