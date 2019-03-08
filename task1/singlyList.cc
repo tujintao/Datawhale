@@ -18,12 +18,21 @@ public:
         _size = 0;
     }
     ~singlyList(){
-       ListNode* p = head->next;
-       while(p) {
+       //感觉还是脑子不清楚清除和打印是不一样的
+       //ListNode* p = head->next;
+    //    ListNode* p = head;
+    //    while(p) {
+    //        delete p;
+    //        p = p->next;
+    //    }
+       while (head) {
+           ListNode *p = head;
+           head = head->next;
            delete p;
-           p = p->next;
+           p = nullptr;
        }
-       delete  head;
+       head = nullptr;
+       tail = nullptr;
        //double free
     //    delete  tail;
     }
