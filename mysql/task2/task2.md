@@ -72,3 +72,58 @@ LIMIT 5;
 
 ![task2-3.png](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-3.png)
 
+也可以实现M至N(某一段的)记录查询
+
+LIMIT offset, recnum 
+
+其中offset
+
+```sql
+SELECT customerName
+FROM customers
+LIMIT 2, 5; 
+```
+
+其中offset为从第几条（M+1）记录开始，recnum为返回的记录条数。
+
+![task2-4.png](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-4.png)
+
+#### CASE...END判断语句
+
+<https://dev.mysql.com/doc/refman/5.7/en/case.html>                                                                                                                     
+
+```mysql
+CASE case_value
+    WHEN when_value THEN statement_list
+    [WHEN when_value THEN statement_list] ...
+    [ELSE statement_list]
+END CASE
+```
+
+Or:
+
+```mysql
+CASE
+    WHEN search_condition THEN statement_list
+    [WHEN search_condition THEN statement_list] ...
+    [ELSE statement_list]
+END CASE
+```
+
+当然我们可以在那个教程提供的数据库上随便试一下
+
+```mysql
+SELECT 
+(CASE
+		WHEN customerNumber  > 150 THEN 'A'
+		WHEN customerNumber <= 150 THEN 'B'
+END)
+FROM 	payments;
+```
+
+### 4.筛选语句 WHERE
+
+如果使用[SELECT语句](http://www.yiibai.com/mysql/select-statement-query-data.html)但不使用WHERE子句在表中查询数据，则会获取表中的所有行记录，这些行记录中大部分是不想要的行记录。例如，在一些表中存放商业交易中的数据。 从这些表中获取所有行，尤其是对于诸如员工，销售订单，采购订单，生产订单等的大型表格来说，这是没有意义的，因为我们经常想要的是一些特定的数据，例如本季度的销售额 ，今年销量比去年同期的销量等等。
+
+`WHERE`子句允许根据指定的过滤表达式或条件来指定要选择的行。
+
