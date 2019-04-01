@@ -48,7 +48,7 @@ RDBMS 即关系数据库管理系统(Relational Database Management System)的�
 
 MySQL 为关系型数据库**(Relational Database Management System)**, 这种所谓的"关系型"可以理解为"表格"的概念, 一个关系型数据库由一个或数个表格组成, 如图所示的一个表格
 
-![image-20190331205853338](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/image-20190331205737195.png)
+![image-20190331205853338](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/image-20190331205853338.png)
 
 - 表头(header): 每一列的名称;
 
