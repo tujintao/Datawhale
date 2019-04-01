@@ -70,5 +70,5 @@ FROM customers
 LIMIT 5;
 ```
 
-![image-20190401102417925](<https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-3.png>)
+![task2-3.png](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-3.png)
 
