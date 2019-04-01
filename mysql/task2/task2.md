@@ -48,13 +48,13 @@ LIMIT 限制返回行的数量。
 DISTINCT
 ```
 
-![image-20190401101219819](/Users/voidspiral/Desktop/DataWhale/mysql/img/task2-1.png)
+![image-20190401101219819](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-1.png)
 
 ```sql
 SELECT DISTINCT jobtitle FROM employees;
 ```
 
-![image-20190401101349233](/Users/voidspiral/Desktop/DataWhale/mysql/img/task2-2.png)
+![image-20190401101349233](https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-2.png)
 
 ##### 前N个语句
 
@@ -70,4 +70,5 @@ FROM customers
 LIMIT 5;
 ```
 
-![image-20190401102417925](/Users/voidspiral/Desktop/DataWhale/mysql/img/task2-3.png)
+![image-20190401102417925](<https://github.com/voidspiral/Datawhale/blob/master/mysql/img/task2-3.png>)
+
