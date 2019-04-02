@@ -457,7 +457,7 @@ FROM Products;
 ```sql
 SELECT Email
 FROM
-		email
+    email
 GROUP BY Email
 HAVING COUNT(Email) > 1;
 ```
@@ -505,7 +505,7 @@ HAVING COUNT(Email) > 1;
 ```mysql
 SELECT name, population, area
 FROM
-		World
+    World
 WHERE	area > 3000000 or (population > 25000000 AND gdp > 20000000);
 ```
 
