@@ -62,7 +62,9 @@ SELECT语句返回指定表中所有匹配的行，很可能是每一行。如�
 
 是，各种数据库中的这一SQL实现并不相同。
 
-在SQL Server和Access中使用SELECT时，可以使用TOP关键字来限制最多返回多少行，如下所示:
+在SQL Server和Access中使用SELECT时，可以使用TOP关键字来限制最多返回多少行
+
+Mysql 中使用 LIMIT
 
 ```sql
 SELECT customerName
